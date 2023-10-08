@@ -136,7 +136,7 @@ def delete(message_id, channel_id, proxy=None):
         print(f"Error: {t.status_code}")
         print(t.text)
 
-your_user_id = get_user_id(TOKEN, headers, proxy)
+your_user_id =int(base64.b64decode(TOKEN.split(".")[0]))
 message_ids = get_messages(channel_id, your_user_id, proxy)
 print("\nGrabbed all messages...")
 time.sleep(3)
