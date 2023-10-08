@@ -50,26 +50,6 @@ headers = {
     "X-Super-Properties": xsuper
 }
 
-
-
-def get_user_id(token, headers, proxy):
-    if proxy == None:
-        response = requests.get("https://discord.com/api/v10/users/@me", headers=headers)
-    else:
-        proxylist = {
-            "http://":proxy,
-            "https://":proxy
-        }
-        response = requests.get("https://discord.com/api/v10/users/@me", headers=headers, proxies=proxylist)
-
-    if response.status_code == 200:
-        user_data = response.json()
-        user_id = user_data['id']
-        return user_id
-    else:
-        print("Failed to get user information. Check your token.")
-        return None
-
 def get_messages(channel_id, your_user_id, proxy):
     
     message_ids = []
