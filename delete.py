@@ -1,4 +1,4 @@
-import requests, json, time, os, threading
+import requests, json, time, os, threading, base64
 
 os.system("cls")
 channel_id = input("Channel id: ")
