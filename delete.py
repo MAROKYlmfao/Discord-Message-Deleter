@@ -2,7 +2,7 @@ import requests, json, time, os, threading, base64
 
 os.system("cls")
 channel_id = input("Channel id: ")
-TOKEN = input("Your discord token: ")
+token = input("Your discord token: ")
 path = './proxy.txt'
 if os.path.exists(path):
     with open("proxy.txt", "r") as f:
@@ -31,7 +31,7 @@ time.sleep(3)
 xsuper = "eyJvcyI6IldpbmRvd3MiLCJicm93c2VyIjoiQ2hyb21lIiwiZGV2aWNlIjoiIiwic3lzdGVtX2xvY2FsZSI6ImVuLVVTIiwiYnJvd3Nlcl91c2VyX2FnZW50IjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwMS4yNDAuOTUgKEludGVybmV0KS5TY3JpcHQvMTAuMDsgV2Ugbm8t) {x-super}"
 
 headers = {
-    "Authorization": TOKEN,
+    "Authorization": token,
     "Connection": "keep-alive",
     "Content-Length": "0",
     "Host": "discord.com",
